@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
 	root 'home#index'
 	
   devise_for :users
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   	member do
   		post :close
   	end
+  	
+  	resources :messages, only: [:create]
   end
   
 end
