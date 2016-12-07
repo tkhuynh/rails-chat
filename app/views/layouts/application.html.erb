@@ -46,7 +46,21 @@
         </div>
       </div>
     </nav>
-
+    <% if notice.present? %>
+      <div class="alert devise-msg alert-info %>">
+        <a aria-label="close" class="close" data-dismiss="alert" href="#">&times;</a>
+        <p>
+          <%= notice %>
+        </p>
+      </div>
+      <% elsif alert.present? %>
+      <div class="alert alert-danger devise-msg">
+        <a aria-label="close" class="close" data-dismiss="alert" href="#">&times;</a>
+        <p>
+          <%= alert %>
+        </p>
+      </div>
+    <% end %>
     <div class="container">
     	<%= yield %>
     </div>

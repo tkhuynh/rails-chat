@@ -6,6 +6,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+nav.navbar-default {
+  border-radius: 0px;
+}
+
+.devise-msg {
+  margin-top: -20px;
+  border-radius: 0px;
+}
+
 ul {
   padding-left: 0px;
   list-style: none;
